@@ -1,0 +1,11 @@
+.container{
+    text-align: center
+}
+.secondary_header{
+    display: inline-block;
+    text-align: left;
+}
+.left_article{
+    display: inline-block;
+    text-align: left;
+}
