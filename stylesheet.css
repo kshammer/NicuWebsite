@@ -1,5 +1,5 @@
 .container{
-    text-align: center
+    text-align: center;
 }
 .secondary_header{
     display: inline-block;
@@ -8,4 +8,7 @@
 .left_article{
     display: inline-block;
     text-align: left;
+}
+body{
+    background-color: #cce6ff;
 }
