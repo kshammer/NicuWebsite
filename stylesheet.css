@@ -11,6 +11,7 @@
 }
 body{
     background-color: #cce6ff;
+    font-family: Helvetica;
 }
 .menu {
     display: inline-block;
