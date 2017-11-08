@@ -12,6 +12,11 @@
     text-align: left;
 }
 
+.form {
+    display: inline-block;
+    text-align: left;
+}
+
 .inputs {
     display: inline-block;
     text-align: left;
