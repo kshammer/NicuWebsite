@@ -42,20 +42,16 @@
         <button id="submitBtn" onclick="submitClick()" class="w3-btn w3-black">Submit</button>
     </div>
     <div class="w3-card-2 w3-center w3-margin w3-blue-grey">
-        <h1 id='fireP'></h1>
+        <p id='fireP'></p>
 
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="database.js"></script>
 <script>
     var mainText = document.getElementById('mainText');
     var submitBtn = document.getElementById('submitBtn');
-    var fireP = document.getElementById('fireP');
-
-    var firebaseCoolRef = firebase.database().ref().child("text");
-    firebaseCoolRef.on('value', function(datasnapshot) {
-        fireP.innerText = datasnapshot.val();
-    });
 
     function submitClick() {
         var firebaseRef = firebase.database().ref();
