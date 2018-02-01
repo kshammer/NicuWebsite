@@ -2,6 +2,21 @@
 <html>
 
 <head>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDrcPRWzn2aZwzeQ1LRHq_RxyMJAMyK904",
+            authDomain: "nicu-e70e7.firebaseapp.com",
+            databaseURL: "https://nicu-e70e7.firebaseio.com",
+            projectId: "nicu-e70e7",
+            storageBucket: "nicu-e70e7.appspot.com",
+            messagingSenderId: "560677342632"
+        };
+        firebase.initializeApp(config);
+
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="coolStyle.css">
@@ -24,15 +39,67 @@
         <h1>Login!</h1>
         <form class="inputs">
             Email:<br>
-            <input class="w3-input" type="text" name="Email"><br> Password:<br>
-            <input class="w3-input" type="text" name="Password"><br>
+            <input id="email" class="w3-input" type="text" name="Email"><br> Password:<br>
+            <input id="password" class="w3-input" type="password" name="Password"><br>
         </form>
         <div class="signup">
-            <button class="w3-btn w3-black">Login</button><br><br>
-
-            <button class="w3-btn w3-black">Forgot Password / Username?</button>
+            <button id="login" class="w3-btn w3-black">Login</button><br><br>
+            <button id="signup" class="w3-btn w3-black">Signup</button>
+            <button id="reset" class="w3-btn w3-black">Forgot Password / Username?</button>
+            <button id="logout" class="w3-btn w3-black">Logout</button>
         </div>
     </div>
+    <script>
+        (function() {
+            // Get Elements 
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const login = document.getElementById('login');
+            const signup = document.getElementById('signup');
+            const reset = document.getElementById('reset');
+            const logout = document.getElementById('logout');
+
+            //Add login event
+            login.addEventListener('click', e => {
+                const emailVal = email.value;
+                const passVal = password.value;
+                const auth = firebase.auth();
+                // Sign in
+                const promise = auth.signInWithEmailAndPassword(emailVal, passVal);
+                promise.catch(e => console.log(e.message));
+                console.log('logged in')
+            });
+
+            //Add Create user
+            signup.addEventListener('click', e => {
+                //TODO check for realy email 
+                const emailVal = email.value;
+                const passVal = password.value;
+                const auth = firebase.auth();
+                // Sign in
+                const promise = auth.createUserWithEmailAndPassword(emailVal, passVal);
+                promise.catch(e => console.log(e.message));
+            });
+
+            //logout
+            logout.addEventListener('click', e => {
+                firebase.auth().signOut();
+                console.log('logged out')
+            });
+
+            //Real time auth listen 
+            firebase.auth().onAuthStateChanged(firebaseUser => {
+                if (firebaseUser) {
+                    console.log(firebaseUser)
+                } else {
+                    console.log('not logged in')
+                }
+            });
+
+
+        }());
+
+    </script>
 </body>
 
 </html>
