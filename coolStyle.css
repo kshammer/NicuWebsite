@@ -10,6 +10,13 @@
     display: inline-block;
     text-align: left;
 }
+.holder{
+    width:90%;
+}
+.column {
+    width:33.33333333%;
+    float:left;
+}
 
 .left_article {
     display: inline-block;
