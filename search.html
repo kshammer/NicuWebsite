@@ -10,6 +10,34 @@
     <title>Scores</title>
 </head>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
 <body>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
@@ -21,6 +49,44 @@
         <a href="index.html">Home</a>
         <a href="database.html">DataBase</a>
     </div>
+	
+	    </div>
+    <div class="mainDiv" align="center">
+        <h1 align="center"> Search FireBase Test</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </div>
+    <div class="w3-card-2 w3-center w3-margin w3-blue-grey">
+        <p id='fireP'></p>
+
+    </div>
+	
+<ul id="myUL">
+  <li><a href="#">Patient 1 - HeartRate 50</a></li>
+  <li><a href="#">Patient 2 - HeartRate 60</a></li>
+
+  <li><a href="#">test123</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+
 </body>
 
 </html>
