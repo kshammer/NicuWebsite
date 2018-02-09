@@ -16,6 +16,8 @@
 .column {
     width:33.33333333%;
     float:left;
+    padding: 1em;
+    margin: 1em;
 }
 
 .left_article {
