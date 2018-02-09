@@ -11,13 +11,13 @@
     text-align: left;
 }
 .holder{
-    width:90%;
+    width:100%;
 }
 .column {
     width:33.33333333%;
     float:left;
-    padding: 1em;
-    margin: 1em;
+    padding: .5em;
+    margin: .7em;
 }
 
 .left_article {
