@@ -1,3 +1,4 @@
+mysql -u root -p
 SHOW DATABASES;
 USE NICU;
 SHOW TABLES;
@@ -9,3 +10,5 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+DESCRIBE tablename
+SELECT * FROM tablename
