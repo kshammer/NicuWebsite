@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once 'config.php';
+require_once 'passwordLib.php';
 ini_set('display_errors', 1);
  
 // Define variables and initialize with empty values
