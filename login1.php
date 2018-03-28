@@ -74,31 +74,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
  
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="coolStyle.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="indexJava.js"></script>
+    <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+    </style>
 </head>
-
 <body>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="scores.html">View Previous Scores</a>
-        <a href="database.html">DataBase</a>
-        <a href="search.html">Search</a>
-        <a href="sampleDisplay.html">Sample</a>
-        <a href="calculate.html">Calculate Score</a>
-    </div>
-    <div class="w3-card-2 w3-center w3-margin w3-blue-grey">
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="wrapper">
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
                 <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
@@ -110,11 +101,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="w3-button" value="Login">
+                <input type="submit" class="btn btn-primary" value="Login">
             </div>
+            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
-    </div>
-   
+    </div>    
 </body>
-
 </html>
