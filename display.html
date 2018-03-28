@@ -2,20 +2,6 @@
 <html>
 
 <head>
-
-    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDrcPRWzn2aZwzeQ1LRHq_RxyMJAMyK904",
-            authDomain: "nicu-e70e7.firebaseapp.com",
-            databaseURL: "https://nicu-e70e7.firebaseio.com",
-            projectId: "nicu-e70e7",
-            storageBucket: "nicu-e70e7.appspot.com",
-            messagingSenderId: "560677342632"
-        };
-        firebase.initializeApp(config);
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="coolStyle.css">
@@ -29,13 +15,9 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="calculate.html">Calculate Score</a>
-        <a href="scores.html">View Previous Scores</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Signup</a>
         <a href="index.html">Home</a>
-        <a href="database.html">DataBase</a>
-        <a href="sampleDisplay.html">Sample</a>
+        <a href="calculate.html">Calculate Score</a>
+        <a href="historical.html">View Previous Scores</a>
     </div>
     <div id="holder" class="holder">
         <div class="w3-card-4 column">
@@ -54,8 +36,8 @@
 
             </div>
 
-            <footer class="w3-container w3-yellow">
-                <h5>at risk</h5>
+            <footer class="w3-container w3-green">
+                <h5>Safe</h5>
             </footer>
 
         </div>
@@ -75,17 +57,11 @@
                 </ul>
             </div>
 
-            <footer class="w3-container w3-yellow">
-                <h5>At Risk</h5>
+            <footer class="w3-container w3-green">
+                <h5>Safe</h5>
             </footer>
 
         </div>
-        <a href="sample7.html">
-            <button type="button">Next Day</button>
-        </a>
-        <a href="sample5.html">
-            <button type="button">Prev Day</button>
-        </a>
     </div>
 </body>
 <script>
@@ -98,24 +74,24 @@
                 {
                     text: 'Cap Refill < 2'
                 }, {
-                    text: 'Heart Rate > 160 for two hours'
+                    text: 'Heart Rate Stable'
                 }, {
                     text: ' Mean Arterial pressure Stable'
                 },
                 {
-                    text: 'Apnea self limited'
+                    text: 'Apnea None'
                 },
                 {
-                    text: 'Respiratory Rate >60 for 1 hour'
+                    text: 'Respiratory Rate No Change'
                 },
                 {
-                    text: 'Bowel Sounds hypoactive for 2 min'
+                    text: 'Bowel Sounds Normoactive'
                 },
                 {
-                    text: 'Abdomen Signs slightly distended'
+                    text: 'Abdomen Signs Soft , Non distended, nontender'
                 },
                 {
-                    text: "Emesis >10% volume "
+                    text: "Emesis None"
                 }
 
             ]
@@ -130,22 +106,22 @@
                     text: 'cap refill 2'
                 },
                 {
-                    text: 'HR 162'
+                    text: 'HR 139'
                 },
                 {
-                    text: 'MAP 34'
+                    text: 'MAP 37'
                 },
                 {
-                    text: 'RR 60'
+                    text: 'RR 48'
                 },
                 {
-                    text: 'WOB mild retractions'
+                    text: 'WOB none'
                 },
                 {
                     text: 'FiO2 0.21'
                 },
                 {
-                    text: 'Support Room Nasal CPAP'
+                    text: 'Support Room Air'
                 },
                 {
                     text: 'Assessment soft, nontender'
@@ -160,10 +136,10 @@
                     text: "emesis no"
                 },
                 {
-                    text: "residuals 1"
+                    text: "residuals no"
                 },
                 {
-                    text: "feed volume 20"
+                    text: "feed volume"
                 },
             ]
         }
