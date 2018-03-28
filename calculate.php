@@ -18,6 +18,7 @@ $sql = "INSERT INTO patient1 (behavior, cardiovascular, respiratory, abdominal, 
 
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
+    header("location: display.php");
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

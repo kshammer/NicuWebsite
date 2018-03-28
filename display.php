@@ -57,13 +57,68 @@
                 </ul>
             </div>
 
-            <footer class="w3-container w3-green">
-                <h5>Safe</h5>
+            <footer class="w3-container w3-yellow">
+                <h5>In Danger</h5>
+            </footer>
+
+        </div>
+        <div class="w3-card-4 column">
+
+            <header class="w3-container w3-blue">
+                <a href="#" onclick="toggle_visibility('bed3');">
+                    <h1>Bed 3</h1>
+                </a>
+            </header>
+
+            <div id="bed3" class="w3-container hidden">
+                <ul>
+                    <li v-for="vector in vectors">
+                        {{ vector.text }}
+                    </li>
+                </ul>
+            </div>
+
+            <footer class="w3-container w3-red">
+                <h5>Needs Immediate Assitance</h5>
             </footer>
 
         </div>
     </div>
 </body>
+<script>
+        var app2 = new Vue({
+            el: '#bed3',
+            data: {
+                vectors: [{
+                        text: 'Behavior Appropriate'
+                    },
+                    {
+                        text: 'Cap Refill < 2'
+                    }, {
+                        text: 'Heart Rate Stable'
+                    }, {
+                        text: ' Mean Arterial pressure Stable'
+                    },
+                    {
+                        text: 'Apnea None'
+                    },
+                    {
+                        text: 'Respiratory Rate No Change'
+                    },
+                    {
+                        text: 'Bowel Sounds Normoactive'
+                    },
+                    {
+                        text: 'Abdomen Signs Soft , Non distended, nontender'
+                    },
+                    {
+                        text: "Emesis None"
+                    }
+    
+                ]
+            }
+        })
+    </script>
 <script>
     var app2 = new Vue({
         el: '#bed2',
