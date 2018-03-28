@@ -101,12 +101,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
+	<link rel="stylesheet" href="coolStyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
+
 </head>
 <body>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="login.php">Login</a>
+        <a href="register.php">Register</a>
+    </div>
+	
+    <div class="w3-card-2 w3-center w3-margin w3-blue-grey" style="width: auto">
+	<center>
     <div class="wrapper">
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
@@ -133,5 +145,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>    
+	</center>
 </body>
+
 </html>
