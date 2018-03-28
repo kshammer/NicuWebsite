@@ -17,7 +17,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
         <a href="calculate.html">Calculate Score</a>
-        <a href="historical.html">View Previous Scores</a>
+        <a href="historical.php">View Previous Scores</a>
     </div>
     <div id="holder" class="holder">
         <div class="w3-card-4 column">
