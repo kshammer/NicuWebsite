@@ -15,9 +15,9 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
         <a href="calculate.html">Calculate Score</a>
-        <a href="historical.php">View Previous Scores</a>
+        <a href="historical.php">Historical</a>
+        <a href="index.html">Logout</a>
     </div>
     <div id="holder" class="holder">
         <div class="w3-card-4 column">
