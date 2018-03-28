@@ -103,6 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 	<link rel="stylesheet" href="coolStyle.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="indexJava.js"></script>
 	<style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
@@ -110,11 +111,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </head>
 <body>
-	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
         <a href="login.php">Login</a>
-        <a href="register.php">Register</a>
     </div>
 	
     <div class="w3-card-2 w3-center w3-margin w3-blue-grey" style="width: auto">

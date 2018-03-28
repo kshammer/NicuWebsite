@@ -92,12 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="scores.html">View Previous Scores</a>
-        <a href="database.html">DataBase</a>
-        <a href="search.html">Search</a>
-        <a href="sampleDisplay.html">Sample</a>
-        <a href="calculate.html">Calculate Score</a>
+        <a href="index.html">Logout</a>
     </div>
     <div class="w3-card-2 w3-center w3-margin w3-blue-grey">
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
