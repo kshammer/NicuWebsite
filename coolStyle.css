@@ -9,6 +9,7 @@
 }
 .table {
     display: inline-table;
+    background-color: white;
 }
 
 .secondary_header {
@@ -41,6 +42,10 @@
 }
 
 body {
+    background-color: #cce6ff;
+    font-family: Helvetica;
+}
+#bootstrap-overrides body {
     background-color: #cce6ff;
     font-family: Helvetica;
 }

@@ -13,7 +13,7 @@
     <title>Scores</title>
 </head>
 
-<body>
+<body id ="bootstrap-overrides">
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -35,8 +35,8 @@ if(! $retval ) {
 if ($retval->num_rows > 0) {
     // output data of each row
     echo "<center>";
-    echo " <div class=\"container\">";
-    echo "<table class=\"table table-hover table-bordered\">";
+    echo " <div class=\"container bg-white\">";
+    echo "<table class=\"table table-hover bg-white table-bordered\">";
     echo " <tr>".
     "<th>behavior</th>".
     "<th>cardiovascular</th>". 
