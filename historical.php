@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="coolStyle.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="indexJava.js"></script>
     <title>Scores</title>
 </head>
@@ -32,13 +35,8 @@ if(! $retval ) {
 if ($retval->num_rows > 0) {
     // output data of each row
     echo "<center>";
-    echo "<style>".
-    "table, th, td {".
-        "border: 1px solid black;".
-        "background-color: white;".
-    "}".
-    "</style>";
-    echo "<table>";
+    echo " <div class=\"container\">";
+    echo "<table class=\"table table-hover table-bordered\">";
     echo " <tr>".
     "<th>behavior</th>".
     "<th>cardiovascular</th>". 
@@ -59,6 +57,7 @@ if ($retval->num_rows > 0) {
         </tr>";
     }
     echo "</table>";
+    echo "</div>";
     echo "</center>";
 } else {
     echo "0 results";
