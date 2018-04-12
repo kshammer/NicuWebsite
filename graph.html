@@ -1,0 +1,62 @@
+<html>
+  <head>
+  
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="coolStyle.css">
+    <script src="indexJava.js"></script>
+	
+	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript'>
+	
+      google.charts.load('current', {'packages':['annotatedtimeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Date');
+        data.addColumn('number', 'Heart Rate');
+        data.addColumn('string', 'title1');
+        data.addColumn('string', 'text1');
+        data.addColumn('number', 'Respiratory Rate');
+        data.addColumn('string', 'title2');
+        data.addColumn('string', 'text2');
+        data.addRows([
+          [new Date(2018, 0 ,1), 115, undefined, undefined, 24, undefined, undefined],
+          [new Date(2018, 0 ,2), 124, undefined, undefined, 21, undefined, undefined],
+          [new Date(2018, 0 ,3), 150, undefined, undefined, 18, undefined, undefined],
+          [new Date(2018, 0 ,4), 107, undefined, undefined, 26, undefined, undefined],
+          [new Date(2018, 0 ,5), 98, undefined, undefined, 33, undefined, undefined],
+          [new Date(2018, 0 ,6), 103, undefined, undefined, 28, undefined, undefined],
+		  [new Date(2018, 0 ,7), 115, undefined, undefined, 24, undefined, undefined],
+          [new Date(2018, 0 ,8), 124, undefined, undefined, 21, undefined, undefined],
+          [new Date(2018, 0 ,9), 150, undefined, undefined, 18, undefined, undefined],
+          [new Date(2018, 0 ,10), 107, undefined, undefined, 26, undefined, undefined],
+          [new Date(2018, 0 ,11), 98, undefined, undefined, 33, undefined, undefined],
+          [new Date(2018, 0 ,12), 103, undefined, undefined, 28, undefined, undefined]
+        ]);
+
+        var chart = new google.visualization.AnnotatedTimeLine(document.getElementById('chart_div'));
+        chart.draw(data, {displayAnnotations: true});
+      }
+    </script>
+  </head>
+
+  <body>
+     
+    </div>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="calculate.html">Calculate Score</a>
+        <a href="historical.php">Historical</a>
+        <a href="index.html">Logout</a>
+    </div>
+    <div class="w3-card-2 w3-center w3-margin w3-blue-grey" style="width: auto">
+
+  
+	<center><h1>Graph</h1></center>
+	
+    <center><div id='chart_div' style='width: 700px; height: 240px;'></div></center>
+
+  </body>
+</html>
