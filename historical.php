@@ -26,7 +26,7 @@
 require_once 'config.php';
 ini_set('display_errors', 1);
 
-$sql = 'SELECT behavior, cardiovascular, respiratory, abdominal, feeds, formula FROM patient1';
+$sql = 'SELECT behavior, cardiovascular, respiratory, abdominal, feeds, formula, score FROM patient1';
 $retval = $link->query($sql);
 
 if(! $retval ) {
@@ -44,6 +44,7 @@ if ($retval->num_rows > 0) {
     "<th>abdominal</th>".
     "<th> feeds</th>".
     "<th> formula</th>".
+    "<th> score </th>".
   "</tr>";
     while($row = $retval->fetch_assoc()) {
         echo "<tr>
@@ -53,6 +54,7 @@ if ($retval->num_rows > 0) {
         "<td>{$row['abdominal']}</td> ".
         "<td> {$row['feeds']}</td> ".
         "<td> {$row['formula']}</td> ".
+        "<td> {$row['score']}</td>".
         "
         </tr>";
     }
