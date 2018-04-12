@@ -17,6 +17,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="calculate.html">Calculate Score</a>
         <a href="historical.php">Historical</a>
+        <a href="graph.html">Graph </a>
         <a href="index.html">Logout</a>
     </div>
     <div id="holder" class="holder">
